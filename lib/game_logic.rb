@@ -22,8 +22,7 @@ class GameLogic
   end
 
   def learn_then_strategize(input)
-    game.answers.store_answer(input)
-    game.favorites.answer_store = game.answers
+    game.favorites.answer_store.store_answer(input)
     game.answer_logic.who_wins?(input, strategy)
   end
 

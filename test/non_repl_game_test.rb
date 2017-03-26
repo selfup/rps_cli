@@ -8,7 +8,7 @@ class NonReplGameTest < Minitest::Test
     comps_answers = ['r', 's', 'p']
     a = Answers.new
     a_l = AnswerLogic.new
-    f = Favorites.new
+    f = Favorites.new(a)
 
     players_move_one = 'p'
     current_play = a.store_answer(players_move_one)

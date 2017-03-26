@@ -16,7 +16,7 @@ class Game
     @comp_store   = COMP_STORE
     @answers      = Answers.new
     @answer_logic = AnswerLogic.new
-    @favorites    = Favorites.new
+    @favorites    = Favorites.new(answers)
     @instructions = Instructions.new
     @game_logic   = GameLogic.new(self)
   end

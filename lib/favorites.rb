@@ -4,7 +4,7 @@ class Favorites
   attr_accessor :answer_store
   attr_reader :favorites, :latest_favorites
 
-  def initialize(answers = nil)
+  def initialize(answers)
     @answer_store = answers
     @favorites = []
   end

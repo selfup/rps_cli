@@ -5,10 +5,7 @@ class AnswerLogic
   def initialize
     @player_score   = 0
     @computer_score = 0
-  end
-
-  def answer_key
-    {'r' => 'p', 'p' => 's', 's' => 'r'}
+    @answer_key = {'r' => 'p', 'p' => 's', 's' => 'r'}
   end
 
   def who_wins?(player, computer)

@@ -5,6 +5,8 @@ require_relative 'game_logic'
 require_relative 'instructions'
 
 class Game
+  COMP_STORE = %w(r s p)
+
   attr_accessor :game_count
   attr_reader   :game_status, :answers, :comp_store, :type_of_game,
                 :player_score, :answer_logic, :favorites, :game_logic,
@@ -20,8 +22,6 @@ class Game
     @instructions = Instructions.new
     @game_logic   = GameLogic.new(self)
   end
-
-  COMP_STORE = ['r', 's', 'p']
 
   def play
     game_logic.run_match

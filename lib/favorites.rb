@@ -14,7 +14,7 @@ class Favorites
   end
 
   def latest_favorites
-    grouped_answers.values.reject { |favs| favs.length == 1 }
+    grouped_answers.values.reject(&method(:fav_length))
   end
 
   def organized_by_favorites
@@ -28,5 +28,11 @@ class Favorites
   def latest_favorite
     return latest_favorites.last[0] if is_tie?
     latest_favorites.first[0]
+  end
+
+  private
+
+  def fav_length(favs)
+    favs.length == 1
   end
 end
